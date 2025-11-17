@@ -3,7 +3,7 @@ from contextlib import contextmanager
 from typing import Optional, Generator
 
 # DB Interface, Repo and Config Classes
-from src.db.postgresql.config import dbconfig, PostgreSQLSettings
+from src.db.postgresql.config import PostgreSQLSettings
 from src.db.interfaces.base import BaseDatabase
 
 # SQLAlchemy Imports

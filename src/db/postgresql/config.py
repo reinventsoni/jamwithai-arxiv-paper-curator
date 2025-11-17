@@ -18,4 +18,3 @@ class PostgreSQLSettings(BaseSettings):
     class Config:
         env_prefix = "POSTGRES_"
 
-dbconfig = PostgreSQLSettings()
