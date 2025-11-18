@@ -1,0 +1,19 @@
+from contextlib import contextmanager
+from src.db.factory import make_databse
+
+#Global Database Instance
+_database = None
+
+def get_database():
+    """Get or create database instance"""
+    global _database
+    if _database is None:
+        _database = make_databse()
+    return _database
+
+@contextmanager
+def get_db_session():
+    """Get a Database Session Context Manager"""
+    database = get_database
+    with database.get_session() as session:
+        yield session
