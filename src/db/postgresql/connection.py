@@ -52,7 +52,7 @@ class PostgreSQLDatabase(BaseDatabase):
 
             # Test the Connection
             assert self.engine is not None
-            with self.engine.connect as conn:
+            with self.engine.connect() as conn:
                 conn.execute(text("SELECT 1"))
                 logger.info("Database connection test successful")
             

@@ -1,5 +1,5 @@
 from contextlib import contextmanager
-from src.db.factory import make_databse
+from src.db.factory import make_database
 
 #Global Database Instance
 _database = None
@@ -8,7 +8,7 @@ def get_database():
     """Get or create database instance"""
     global _database
     if _database is None:
-        _database = make_databse()
+        _database = make_database()
     return _database
 
 @contextmanager

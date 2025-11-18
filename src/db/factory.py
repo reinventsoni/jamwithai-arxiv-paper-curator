@@ -3,7 +3,7 @@ from src.db.interfaces.base import BaseDatabase
 from src.db.postgresql.config import PostgreSQLSettings
 from src.db.postgresql.connection import PostgreSQLDatabase
 
-def make_databse() -> BaseDatabase:
+def make_database() -> BaseDatabase:
     """
     Factor Function to create a database instance
     """
