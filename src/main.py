@@ -7,7 +7,7 @@ from src.config import get_settings
 from src.db.factory import make_database
 
 #Week 1 - No Complex Middleware
-from src.routers import ping
+from src.routers import ping, ask, papers
 
 # Setup logging
 logging.basicConfig(
@@ -51,6 +51,8 @@ app = FastAPI(
 
 # Include routers
 app.include_router(ping.router)
+app.include_router(papers.router)
+app.include_router(ask.router)
 
 if __name__ == "__main__":
     import uvicorn
